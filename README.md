@@ -64,5 +64,4 @@ An Android application for downloading and managing media from supported platfor
   <img src="screenshots/home.jpeg" width="220">
   <img src="screenshots/instagram.jpeg" width="220">
   <img src="screenshots/qualitypicker.jpeg" width="220">
-  <img src="screenshots/settings.jpeg" width="220">
 </p>
