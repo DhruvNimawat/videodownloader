@@ -3,102 +3,475 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy - Video Downloader</title>
-
+<title>Privacy Policy – Video Downloader by BE Global</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 <style>
-body{
-    background:#f3f4f6;
-    margin:0;
-    padding:40px 20px;
-    font-family:"Times New Roman",serif;
-    line-height:1.7;
-}
+  :root {
+    --ink: #1a1a2e;
+    --ink-light: #3d3d5c;
+    --rule: #c8b99a;
+    --accent: #b5451b;
+    --accent-soft: #f5ede6;
+    --bg: #faf8f4;
+    --card: #ffffff;
+    --tag-bg: #eef2f7;
+    --tag-text: #2c4a7c;
+    --warn-bg: #fff4ef;
+    --warn-border: #e07050;
+  }
 
-.document{
-    max-width:900px;
-    margin:0 auto;
-    background:#fff;
-    padding:50px 70px;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
-    border-radius:8px;
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-h1{
-    text-align:center;
-    margin-bottom:30px;
-}
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.8;
+    padding: 48px 20px 80px;
+  }
 
-p,li{
-    font-size:18px;
-}
+  .wrapper {
+    max-width: 820px;
+    margin: 0 auto;
+  }
 
-a{
-    word-break:break-word;
-}
+  /* ── Header ── */
+  .doc-header {
+    text-align: center;
+    padding-bottom: 36px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--rule);
+  }
+
+  .brand-badge {
+    display: inline-block;
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--rule);
+    padding: 5px 16px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .meta {
+    font-size: 13px;
+    color: var(--ink-light);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Notice box ── */
+  .notice {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    color: #5a2a10;
+  }
+  .notice strong { display: block; margin-bottom: 4px; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+  /* ── Sections ── */
+  .section {
+    margin-bottom: 44px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  h2 .sec-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  p { margin-bottom: 14px; }
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 14px;
+  }
+
+  ul li {
+    padding: 8px 0 8px 20px;
+    position: relative;
+    border-bottom: 1px solid #f0ece4;
+    font-size: 16px;
+  }
+  ul li:last-child { border-bottom: none; }
+  ul li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 11px;
+    top: 11px;
+  }
+  ul li strong {
+    color: var(--ink);
+    font-weight: 600;
+    display: inline-block;
+    min-width: 0;
+  }
+
+  /* ── SDK Table ── */
+  .sdk-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 15px;
+  }
+  .sdk-table thead tr {
+    background: var(--ink);
+    color: #fff;
+  }
+  .sdk-table thead th {
+    padding: 10px 14px;
+    text-align: left;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .sdk-table tbody tr:nth-child(even) { background: #f5f2ed; }
+  .sdk-table tbody tr:nth-child(odd) { background: var(--card); }
+  .sdk-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e8e2d8;
+    vertical-align: top;
+    line-height: 1.5;
+    color: var(--ink-light);
+  }
+  .sdk-table td:first-child { font-weight: 600; color: var(--ink); }
+  .none-tag {
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+
+  /* ── Rights grid ── */
+  .rights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 14px 0;
+  }
+  .right-card {
+    background: var(--tag-bg);
+    border-radius: 6px;
+    padding: 14px 16px;
+    border-left: 3px solid var(--tag-text);
+  }
+  .right-card .right-title {
+    font-weight: 600;
+    color: var(--tag-text);
+    font-size: 14px;
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
+  }
+  .right-card p {
+    font-size: 14px;
+    color: var(--ink-light);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ── Contact box ── */
+  .contact-box {
+    background: var(--ink);
+    color: #fff;
+    border-radius: 6px;
+    padding: 28px 32px;
+    margin-top: 16px;
+  }
+  .contact-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .contact-box p { color: #c8c4d4; font-size: 15px; margin-bottom: 8px; }
+  .contact-box a { color: var(--rule); }
+  .contact-box .detail { display: flex; flex-direction: column; gap: 6px; }
+  .contact-box .detail span { font-size: 14px; color: #a09cbd; }
+  .contact-box .detail strong { color: #fff; font-size: 16px; }
+
+  /* ── Footer ── */
+  .doc-footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: #9090a8;
+    letter-spacing: 0.04em;
+  }
+
+  a { color: var(--accent); }
+
+  @media (max-width: 600px) {
+    body { padding: 28px 14px 60px; }
+    .sdk-table { font-size: 13px; }
+    .sdk-table thead th, .sdk-table td { padding: 8px 10px; }
+    .contact-box { padding: 20px 18px; }
+  }
 </style>
-
 </head>
 <body>
+<div class="wrapper">
 
-<div class="document">
-<h1>Privacy Policy</h1>
-<p>Last updated: June 2026</p>
-<p>Video Downloader ("we", "our", or "the app") is committed to protecting your privacy. This policy explains how we handle your information when you use our mobile application.</p>
-<p><strong>Information We Collect</strong></p>
-<p>To provide video downloading and status saving services, the app may access the following on your device:</p>
-<ul>
-<li><strong>Storage &amp; Media Permissions</strong>: We require access to your device&rsquo;s storage to save downloaded videos, audio, and images. On Android 13 and above, we specifically request access to Media Video, Media Audio, and Media Images.</li>
-<li><strong>Internet Access</strong>: To connect to video platforms and download content.</li>
-<li><strong>Cookies &amp; Session Data</strong>: When you log into Instagram or Facebook via the app&rsquo;s built-in browser, session cookies are stored locally on your device in a private database. This data is used only to authenticate your requests to those platforms and is never sent to our servers.</li>
-<li><strong>Advertising ID</strong>: We may use your device's Advertising ID to serve relevant advertisements.</li>
-</ul>
-<p>We do not collect personal information, passwords, or payment information.</p>
-<p><strong>How Your Data Is Used</strong></p>
-<ul>
-<li>Local Processing: All video extraction and merging (via FFmpeg) happen on your device. We do not use external servers to process your downloads.</li>
-<li>No File Uploads: We do not upload, collect, or store your downloaded files, WhatsApp statuses, or personal media on any external servers. Your files remain 100% under your control on your device.</li>
-<li>Storage Folders: Downloaded content is saved in professional subfolders titled "Video Downloader" within your device&rsquo;s Movies, Music, and Pictures directories.</li>
-</ul>
-<p><strong>Advertising</strong></p>
-<p>This app displays ads served by Google Ad Manager. Google may use your device's Advertising ID and other non-personal data to serve relevant advertisements.</p>
-<p>The types of ads shown include:</p>
-<ul>
-<li>Banner, Interstitial, and Native ads.</li>
-<li>Rewarded and App Open ads.</li>
-</ul>
-<p>You can opt out of personalized ads by visiting your device's&nbsp;<strong>Settings &rarr; Google &rarr; Ads &rarr; Opt out of Ads Personalization</strong>.</p>
-<p>For more information on how Google uses data, visit:&nbsp;<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-<p><strong>Analytics &amp; Attribution</strong></p>
-<p>We use Apptrove, a mobile measurement platform, to track app installs and in-app events such as document scans, PDF saves, and shares. This helps us understand how users interact with the app and improve our services.</p>
-<p>Apptrove may collect:</p>
-<ul>
-<li>Device identifiers (Advertising ID / GAID)</li>
-<li>App usage events (anonymous)</li>
-<li>Install source information</li>
-</ul>
-<p>For more information, visit:&nbsp;<a href="https://apptrove.com/privacy-policy">https://apptrove.com/privacy-policy</a></p>
-<p><strong>Third-Party Services</strong></p>
-<p>The app utilizes several third-party libraries and services to function:</p>
-<ul>
-<li>Google Play Services: For core app functionality and security.</li>
-<li>YoutubeDL-Android &amp; FFmpeg: For native video extraction and merging.</li>
-<li>Glide: For fast loading of media thumbnails.</li>
-<li>Apptrove (analytics &amp; attribution)</li>
-<li>Google Ad Manager: For monetization.</li>
-</ul>
-<p><strong>User Responsibilities &amp; Copyright</strong></p>
-<p>This app is intended for personal use only. Users are responsible for ensuring they have the legal right to download content from third-party platforms. We do not encourage or condone the unauthorized downloading of copyrighted material.</p>
-<p><strong>Security</strong></p>
-<p>We prioritize the security of your data. By keeping all video processing local to your device and using standard Android security protocols for cookie storage, we minimize the risk of data exposure.</p>
-<p><strong>Children's Privacy</strong></p>
-<p>This app is not directed toward children under 13. We do not knowingly collect personal data from children.</p>
-<p><strong>Changes to This Policy</strong></p>
-<p>We may update this Privacy Policy periodically. Your continued use of the app after any changes signifies your acceptance of the new terms.</p>
-<p><strong>Contact</strong></p>
-<p>For questions regarding this Privacy Policy, contact:</p>
-<p><a href="mailto:kunal@thebeglobal.com">kunal@thebeglobal.com</a></p>
-<p>&copy; 2026 Video Downloader. All rights reserved.</p>
+  <!-- Header -->
+  <header class="doc-header">
+    <div class="brand-badge">BE Global · Legal Document</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Video Downloader &nbsp;·&nbsp; Last Updated: June 2026 &nbsp;·&nbsp; Version 2.0</p>
+  </header>
+
+  <!-- Important notice -->
+  <div class="notice">
+    <strong>⚠ Important Notice to Users</strong>
+    This app is designed strictly for downloading content you own, have explicit rights to, or content that is freely licensed for redistribution. Downloading copyrighted material without authorization from the rights holder is prohibited and solely the user's legal responsibility.
+  </div>
+
+  <!-- 1. Introduction -->
+  <div class="section">
+    <h2><span class="sec-num">01</span> Introduction &amp; Developer Information</h2>
+    <p>This Privacy Policy describes how <strong>BE Global</strong> ("we", "our", or "us"), developed by <strong>Kunal Gupta</strong>, collects, uses, and protects information when you use the <strong>Video Downloader</strong> mobile application ("the App").</p>
+    <p>By using the App, you agree to the practices described in this policy. If you do not agree, please discontinue use of the App.</p>
+    <ul>
+      <li><strong>Developer Name:</strong> Kunal Gupta</li>
+      <li><strong>Company:</strong> BE Global</li>
+      <li><strong>Privacy Contact:</strong> <a href="mailto:kunal@thebeglobal.com">kunal@thebeglobal.com</a></li>
+      <li><strong>Privacy Policy URL:</strong> Hosted at a permanent, publicly accessible URL (non-geofenced)</li>
+    </ul>
+  </div>
+
+  <!-- 2. Copyright -->
+  <div class="section">
+    <h2><span class="sec-num">02</span> Copyright, Legal Use &amp; User Responsibilities</h2>
+    <p>This App is a technical tool intended exclusively for lawful personal use. <strong>We do not facilitate, encourage, or condone the downloading, copying, or redistribution of copyrighted content without explicit authorization from the rights holder.</strong></p>
+    <p>Permitted uses include:</p>
+    <ul>
+      <li>Content you have created yourself</li>
+      <li>Content explicitly licensed under Creative Commons or equivalent open licenses</li>
+      <li>Content the rights holder has made freely available for download</li>
+      <li>Content that is in the public domain</li>
+    </ul>
+    <p>Users are solely and fully responsible for ensuring their use of the App complies with all applicable copyright laws, platform terms of service, and local regulations. BE Global accepts no liability for any unauthorized use by the user.</p>
+    <p>Regarding third-party platforms (Instagram, Facebook, WhatsApp, YouTube, etc.): users who access these platforms through the App's built-in browser are solely responsible for compliance with each platform's own terms of service. We do not endorse any use of this App that would violate those terms.</p>
+  </div>
+
+  <!-- 3. Data We Collect -->
+  <div class="section">
+    <h2><span class="sec-num">03</span> Information We Access &amp; Collect</h2>
+    <p>To deliver core functionality, the App accesses the following on your device:</p>
+    <ul>
+      <li><strong>Storage &amp; Media Permissions (READ_MEDIA_VIDEO, READ_MEDIA_AUDIO, READ_MEDIA_IMAGES):</strong> Broad media access is required as a core function of this App — to save user-initiated downloads (videos, audio, images) directly to your device. This permission is used solely for saving content the user explicitly chooses to download. On Android 12 and below, general storage permission (WRITE_EXTERNAL_STORAGE) is used for the same purpose.</li>
+      <li><strong>Internet Access:</strong> Required to connect to video platforms and retrieve content URLs for download.</li>
+      <li><strong>Cookies &amp; Session Data:</strong> When you use the App's built-in browser to log into Instagram or Facebook, session cookies are stored locally in a private, encrypted database on your device. This data is never transmitted to BE Global's servers. It is used solely to authenticate your session with those platforms.</li>
+      <li><strong>Advertising ID (GAID):</strong> Your device's Advertising ID may be accessed by Google Ad Manager and Apptrove for serving relevant ads and tracking app install attribution.</li>
+    </ul>
+    <p><strong>We do not collect:</strong> your name, email address, passwords, payment information, contacts, location data, or any personally identifiable information directly.</p>
+  </div>
+
+  <!-- 4. How Data is Used -->
+  <div class="section">
+    <h2><span class="sec-num">04</span> How Your Data Is Used</h2>
+    <ul>
+      <li><strong>Local Processing Only:</strong> All video extraction, format conversion, and merging operations (performed via YoutubeDL-Android and FFmpeg) occur entirely on your device. No video data is sent to BE Global servers.</li>
+      <li><strong>No File Uploads:</strong> We do not upload, collect, store, or transmit your downloaded files, WhatsApp statuses, or personal media to any external server. Your downloaded content remains 100% on your device.</li>
+      <li><strong>Advertising:</strong> Advertising ID and device signals are used by Google Ad Manager to display banner, interstitial, native, rewarded, and app open advertisements within the App.</li>
+      <li><strong>Analytics &amp; Attribution:</strong> Apptrove receives anonymous usage events (such as app install, download initiated, download completed) and the Advertising ID to measure campaign attribution and understand user interaction with the App.</li>
+      <li><strong>Storage Folders:</strong> Downloaded content is saved into clearly labelled sub-folders titled "Video Downloader" within your device's Movies, Music, and Pictures directories.</li>
+    </ul>
+  </div>
+
+  <!-- 5. Third-Party SDKs -->
+  <div class="section">
+    <h2><span class="sec-num">05</span> Third-Party SDKs &amp; Data Disclosure</h2>
+    <p>The App integrates the following third-party libraries and services. Each one's data practices are disclosed below as required by Google Play's Data Safety policy:</p>
+    <table class="sdk-table">
+      <thead>
+        <tr>
+          <th>SDK / Service</th>
+          <th>Data Collected</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Ad Manager</td>
+          <td>Advertising ID, device info, app interactions</td>
+          <td>Ad serving &amp; monetization</td>
+        </tr>
+        <tr>
+          <td>Apptrove</td>
+          <td>Advertising ID (GAID), install source, anonymous usage events (e.g. download initiated, download completed)</td>
+          <td>Install attribution &amp; analytics</td>
+        </tr>
+        <tr>
+          <td>Google Play Services</td>
+          <td>Device identifiers (for core functionality)</td>
+          <td>App security &amp; functionality</td>
+        </tr>
+        <tr>
+          <td>YoutubeDL-Android</td>
+          <td><span class="none-tag">None — local only</span></td>
+          <td>Video URL extraction on-device</td>
+        </tr>
+        <tr>
+          <td>FFmpeg</td>
+          <td><span class="none-tag">None — local only</span></td>
+          <td>Video/audio merging on-device</td>
+        </tr>
+        <tr>
+          <td>Glide</td>
+          <td><span class="none-tag">None — local only</span></td>
+          <td>Media thumbnail loading on-device</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>For full details on how Google uses data, visit: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a><br>
+    For Apptrove's practices, visit: <a href="https://apptrove.com/privacy-policy" target="_blank">https://apptrove.com/privacy-policy</a></p>
+  </div>
+
+  <!-- 6. Advertising -->
+  <div class="section">
+    <h2><span class="sec-num">06</span> Advertising</h2>
+    <p>This App displays advertisements served by <strong>Google Ad Manager</strong>. Google may use your device's Advertising ID and other non-personal signals to serve relevant advertisements. Ad types shown include Banner, Interstitial, Native, Rewarded, and App Open ads.</p>
+    <p>Upon first launch, you will be asked for your consent before personalized advertising is enabled, in accordance with applicable privacy regulations including GDPR and India's DPDP Act.</p>
+    <p>To opt out of personalized ads at any time, go to your device's <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong> (or on Android 12+, <strong>Settings → Privacy → Ads → Delete advertising ID</strong>).</p>
+  </div>
+
+  <!-- 7. User Consent -->
+  <div class="section">
+    <h2><span class="sec-num">07</span> User Consent</h2>
+    <p>Before any advertising ID or analytics tracking is activated, the App will display a consent prompt on first launch. You may choose to:</p>
+    <ul>
+      <li><strong>Accept personalized ads and analytics:</strong> Advertising ID and usage events are shared with Google Ad Manager and Apptrove for personalized ads and attribution tracking.</li>
+      <li><strong>Decline personalized ads:</strong> You will still see ads, but they will not be personalized. Analytics events will remain anonymous. Your Advertising ID will not be used for personalization.</li>
+    </ul>
+    <p>You can change your consent preferences at any time in the App's Settings screen or via your device's system settings.</p>
+  </div>
+
+  <!-- 8. Data Retention -->
+  <div class="section">
+    <h2><span class="sec-num">08</span> Data Retention</h2>
+    <ul>
+      <li><strong>Session Cookies (Instagram/Facebook):</strong> Stored locally on your device until you clear the App's data or uninstall the App. Never sent to BE Global.</li>
+      <li><strong>Downloaded Media Files:</strong> Stored on your device indefinitely until you manually delete them.</li>
+      <li><strong>Advertising ID &amp; Analytics Data:</strong> Retained by Google Ad Manager and Apptrove per their own retention policies (typically 13–26 months). BE Global does not retain this data independently.</li>
+    </ul>
+  </div>
+
+  <!-- 9. Data Deletion -->
+  <div class="section">
+    <h2><span class="sec-num">09</span> Your Right to Data Deletion</h2>
+    <p>You have the right to request deletion of any data associated with your use of the App. To exercise this right:</p>
+    <ul>
+      <li><strong>Session/Cookie Data:</strong> Go to your device Settings → Apps → Video Downloader → Clear Data. This immediately deletes all locally stored session cookies.</li>
+      <li><strong>Advertising ID Data:</strong> On Android 12+, go to Settings → Privacy → Ads → Delete advertising ID. This resets your Advertising ID and disassociates all prior data.</li>
+      <li><strong>Request via Email:</strong> Send a deletion request to <a href="mailto:kunal@thebeglobal.com">kunal@thebeglobal.com</a>. We will process your request and contact relevant third-party partners (Apptrove, Google) within 30 days.</li>
+    </ul>
+  </div>
+
+  <!-- 10. User Rights (GDPR, CCPA, DPDP) -->
+  <div class="section">
+    <h2><span class="sec-num">10</span> Your Privacy Rights</h2>
+    <p>Depending on your location, you may have the following rights under applicable law:</p>
+    <div class="rights-grid">
+      <div class="right-card">
+        <div class="right-title">🇪🇺 GDPR (EU/EEA/UK)</div>
+        <p>Right to access, rectify, erase, restrict processing, data portability, and object to processing. Legal basis for ad-related processing is consent; analytics is legitimate interest.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-title">🇺🇸 CCPA (California)</div>
+        <p>Right to know what data is collected, right to delete, right to opt out of sale of personal information. We do not sell personal information.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-title">🇮🇳 India DPDP Act 2023</div>
+        <p>Right to information about processing, right to correction and erasure, right to grievance redressal. Contact our Data Fiduciary at kunal@thebeglobal.com.</p>
+      </div>
+    </div>
+    <p>To exercise any of the above rights, contact us at <a href="mailto:kunal@thebeglobal.com">kunal@thebeglobal.com</a>. We will respond within 30 days.</p>
+  </div>
+
+  <!-- 11. Security -->
+  <div class="section">
+    <h2><span class="sec-num">11</span> Security</h2>
+    <p>We prioritize the security of your data. All video processing and cookie storage occur locally on your device using standard Android security protocols. We do not operate any external servers that store your personal data or media files, which significantly reduces the risk of data exposure or breach.</p>
+  </div>
+
+  <!-- 12. Children's Privacy -->
+  <div class="section">
+    <h2><span class="sec-num">12</span> Children's Privacy</h2>
+    <p>This App is not directed toward children under the age of 13, and we do not knowingly collect personal data from children under 13. If you believe a child has provided us with personal information, please contact us at <a href="mailto:kunal@thebeglobal.com">kunal@thebeglobal.com</a> and we will take immediate steps to delete such data.</p>
+  </div>
+
+  <!-- 13. Changes -->
+  <div class="section">
+    <h2><span class="sec-num">13</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy periodically to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will update the "Last Updated" date at the top of this document and, where appropriate, notify you within the App.</p>
+    <p>Your continued use of the App after any changes constitutes your acceptance of the revised policy. We encourage you to review this policy periodically.</p>
+  </div>
+
+  <!-- 14. Contact -->
+  <div class="section">
+    <h2><span class="sec-num">14</span> Contact &amp; Grievance Redressal</h2>
+    <div class="contact-box">
+      <h3>Get in Touch</h3>
+      <p>For any questions, concerns, or requests regarding this Privacy Policy or your data rights, please contact:</p>
+      <div class="detail">
+        <div><span>Developer</span><strong>Kunal Gupta</strong></div>
+        <div><span>Company</span><strong>BE Global</strong></div>
+        <div><span>Privacy &amp; Data Requests</span><strong><a href="mailto:kunal@thebeglobal.com">kunal@thebeglobal.com</a></strong></div>
+        <div><span>Response Time</span><strong>Within 30 days of receiving your request</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="doc-footer">
+    <p>&copy; 2026 BE Global · Video Downloader · All rights reserved.</p>
+    <p style="margin-top:6px;">This document was last reviewed for Google Play Store compliance in June 2026.</p>
+  </footer>
+
 </div>
-
 </body>
 </html>
