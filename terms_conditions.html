@@ -3,114 +3,446 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Conditions - Video Downloader</title>
-
+<title>Terms & Conditions – Video Downloader by BE Global</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 <style>
-body{
-    background:#f3f4f6;
-    margin:0;
-    padding:40px 20px;
-    font-family:"Times New Roman",serif;
-    line-height:1.7;
-}
+  :root {
+    --ink: #1a1a2e;
+    --ink-light: #3d3d5c;
+    --rule: #c8b99a;
+    --accent: #b5451b;
+    --accent-soft: #f5ede6;
+    --bg: #faf8f4;
+    --card: #ffffff;
+    --tag-bg: #eef2f7;
+    --tag-text: #2c4a7c;
+    --warn-bg: #fff4ef;
+    --warn-border: #e07050;
+    --ok-bg: #f0f7f0;
+    --ok-border: #4a9a5a;
+  }
 
-.document{
-    max-width:900px;
-    margin:0 auto;
-    background:#fff;
-    padding:50px 70px;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
-    border-radius:8px;
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-h1{
-    text-align:center;
-    margin-bottom:30px;
-}
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.8;
+    padding: 48px 20px 80px;
+  }
 
-p,li{
-    font-size:18px;
-}
+  .wrapper { max-width: 820px; margin: 0 auto; }
 
-a{
-    word-break:break-word;
-}
+  /* ── Header ── */
+  .doc-header {
+    text-align: center;
+    padding-bottom: 36px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--rule);
+  }
+  .brand-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--rule);
+    padding: 5px 16px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .meta { font-size: 13px; color: var(--ink-light); letter-spacing: 0.04em; }
+
+  /* ── Notice boxes ── */
+  .notice {
+    border-left: 4px solid var(--warn-border);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 40px;
+    font-size: 15px;
+  }
+  .notice.warn { background: var(--warn-bg); color: #5a2a10; }
+  .notice.ok   { background: var(--ok-bg);   color: #1e4a28; border-color: var(--ok-border); }
+  .notice strong { display: block; margin-bottom: 4px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* ── Sections ── */
+  .section { margin-bottom: 44px; }
+
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  h2 .sec-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  p { margin-bottom: 14px; }
+  p:last-child { margin-bottom: 0; }
+
+  ul, ol { list-style: none; padding: 0; margin: 10px 0 14px; }
+  ul li, ol li {
+    padding: 8px 0 8px 22px;
+    position: relative;
+    border-bottom: 1px solid #f0ece4;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  ul li:last-child, ol li:last-child { border-bottom: none; }
+  ul li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 11px;
+    color: var(--accent); font-size: 11px;
+  }
+  ol { counter-reset: ol-counter; }
+  ol li { counter-increment: ol-counter; }
+  ol li::before {
+    content: counter(ol-counter) ".";
+    position: absolute; left: 0; top: 8px;
+    color: var(--accent); font-size: 13px; font-weight: 600;
+  }
+  li strong { color: var(--ink); font-weight: 600; }
+
+  /* ── Prohibited / Permitted two-col ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 14px 0;
+  }
+  .col-card {
+    border-radius: 6px;
+    padding: 16px 18px;
+  }
+  .col-card.allowed { background: var(--ok-bg); border-left: 3px solid var(--ok-border); }
+  .col-card.prohibited { background: var(--warn-bg); border-left: 3px solid var(--warn-border); }
+  .col-card .col-title {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .col-card.allowed .col-title { color: #1e4a28; }
+  .col-card.prohibited .col-title { color: #7a2010; }
+  .col-card ul { margin: 0; }
+  .col-card ul li {
+    font-size: 14px;
+    border-bottom: none;
+    padding: 4px 0 4px 18px;
+  }
+  .col-card ul li::before { top: 6px; }
+
+  /* ── Platform disclaimer strip ── */
+  .platform-strip {
+    background: var(--tag-bg);
+    border: 1px solid #d0daea;
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin: 14px 0;
+    font-size: 15px;
+    color: var(--tag-text);
+    line-height: 1.6;
+  }
+  .platform-strip strong { display: block; margin-bottom: 6px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* ── Liability table ── */
+  .liab-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  .liab-table thead tr { background: var(--ink); color: #fff; }
+  .liab-table thead th { padding: 10px 14px; text-align: left; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+  .liab-table tbody tr:nth-child(even) { background: #f5f2ed; }
+  .liab-table tbody tr:nth-child(odd)  { background: var(--card); }
+  .liab-table td { padding: 10px 14px; border-bottom: 1px solid #e8e2d8; vertical-align: top; line-height: 1.5; color: var(--ink-light); }
+  .liab-table td:first-child { font-weight: 600; color: var(--ink); width: 38%; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 3px; letter-spacing: 0.05em; text-transform: uppercase; }
+  .badge.no  { background: #fde8e8; color: #b91c1c; }
+  .badge.yes { background: #e8f5e9; color: #1b5e20; }
+
+  /* ── Contact box ── */
+  .contact-box {
+    background: var(--ink); color: #fff;
+    border-radius: 6px; padding: 28px 32px; margin-top: 16px;
+  }
+  .contact-box h3 { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 16px; font-weight: 600; }
+  .contact-box p  { color: #c8c4d4; font-size: 15px; margin-bottom: 8px; }
+  .contact-box a  { color: var(--rule); }
+  .contact-box .detail { display: flex; flex-direction: column; gap: 6px; }
+  .contact-box .detail span  { font-size: 13px; color: #a09cbd; }
+  .contact-box .detail strong { color: #fff; font-size: 15px; }
+
+  /* ── Footer ── */
+  .doc-footer {
+    text-align: center; margin-top: 60px;
+    padding-top: 24px; border-top: 1px solid var(--rule);
+    font-size: 13px; color: #9090a8; letter-spacing: 0.04em;
+  }
+
+  a { color: var(--accent); }
+
+  @media (max-width: 600px) {
+    body { padding: 28px 14px 60px; }
+    .two-col { grid-template-columns: 1fr; }
+    .liab-table { font-size: 13px; }
+    .liab-table thead th, .liab-table td { padding: 8px 10px; }
+    .contact-box { padding: 20px 18px; }
+  }
 </style>
-
 </head>
 <body>
+<div class="wrapper">
 
-<div class="document">
-<h1>Terms & Conditions</h1>
-<p>Last updated: June 2026</p>
-<p>Welcome to Video Downloader.</p>
-<p>By downloading and using this application, you agree to comply with and be bound by the following terms and conditions. If you do not agree with these terms, please do not use the application.</p>
-<ol>
-<li><strong> Use of the App</strong></li>
-</ol>
-<p>Video Downloader provides a tool for users to extract and save media from public platforms, including videos, audio, and social media statuses, directly to their mobile devices.</p>
-<ul>
-<li>You agree to use the app only for lawful purposes.</li>
-<li>You are solely responsible for the content you download.</li>
-<li>This app is intended for personal, non-commercial use only.</li>
-</ul>
-<ol start="2">
-<li><strong> Intellectual Property &amp; Copyright</strong></li>
-</ol>
-<ul>
-<li>Third-Party Content: All videos, images, and audio downloaded using this app are the property of their respective owners. We do not claim any ownership of the media you download.</li>
-<li>User Responsibility: You must respect the intellectual property rights of others. Unauthorized downloading of copyrighted material is strictly prohibited and may violate the Terms of Service of the respective platforms (YouTube, Instagram, Facebook, etc.).</li>
-<li>App Intellectual Property: All app designs, branding, custom software, logos, and features belong to the app owner unless otherwise stated.</li>
-</ul>
-<ol start="3">
-<li><strong> Non-Affiliation Disclaimer</strong></li>
-</ol>
-<p>Video Downloader is an independent utility and is not affiliated, associated, authorized, endorsed by, or in any way officially connected with YouTube, Facebook, Instagram, WhatsApp, or any of their subsidiaries. All product and company names are the registered trademarks of their original owners.</p>
-<ol start="4">
-<li><strong> Advertising</strong></li>
-</ol>
-<p>This app displays advertisements served by Google Ad Manager. By using the app, you agree to the display of ads including:</p>
-<ul>
-<li>Banner, Interstitial, and Native ads.</li>
-<li>Rewarded and App Open ads.</li>
-</ul>
-<p>Ads are served based on your device's Advertising ID and anonymous usage data. You may opt out of personalized ads via your device settings under Settings &rarr; Google &rarr; Ads &rarr; Opt out of Ads Personalization.</p>
-<ol start="5">
-<li><strong> Analytics &amp; Attribution</strong></li>
-</ol>
-<p>We use Apptrove to track app installs and anonymous in-app events (such as successful link analysis or file saves). This data helps us improve the performance and stability of the downloader engine. No personally identifiable information (PII) is collected through this service.</p>
-<ol start="6">
-<li><strong> Limitations of Liability</strong></li>
-</ol>
-<p>We provide this tool "as is" and are not responsible for:</p>
-<ul>
-<li>Any violation of third-party terms of service by the user.</li>
-<li>Data loss or corrupted files on your device.</li>
-<li>The inability to download specific videos due to changes in platform security.</li>
-<li>Ad content displayed by Google Ad Manager.</li>
-<li>Any indirect or consequential damages arising from the use of the app.</li>
-</ul>
-<ol start="7">
-<li><strong> Third-Party Services</strong></li>
-</ol>
-<p>The app uses the following third-party tools and services:</p>
-<ul>
-<li>Google Play Services</li>
-<li>Google Ad Manager (Advertising)</li>
-<li>Apptrove (Analytics)</li>
-<li>YoutubeDL &amp; FFmpeg (Media Processing)</li>
-</ul>
-<p>These services operate under their own terms and privacy policies.</p>
-<ol start="8">
-<li><strong> Changes to Terms</strong></li>
-</ol>
-<p>We reserve the right to update these Terms &amp; Conditions at any time without prior notice. Your continued use of the app after changes are made constitutes your acceptance of the updated terms.</p>
-<ol start="9">
-<li><strong> Contact Information</strong></li>
-</ol>
-<p>For questions or concerns regarding these terms, please contact: <a href="mailto:kunal@thebeglobal.com">kunal@thebeglobal.com</a></p>
-<p>&copy; 2026 Video Downloader. All rights reserved.</p>
+  <!-- Header -->
+  <header class="doc-header">
+    <div class="brand-badge">BE Global · Legal Document</div>
+    <h1>Terms &amp; Conditions</h1>
+    <p class="meta">Video Downloader &nbsp;·&nbsp; Last Updated: June 2026 &nbsp;·&nbsp; Version 2.0</p>
+  </header>
+
+  <div class="notice warn">
+    <strong>⚠ Please Read Carefully</strong>
+    By downloading or using this application, you agree to be legally bound by these Terms &amp; Conditions. If you do not agree with any part of these terms, please do not use the application.
+  </div>
+
+  <!-- 1. Developer Identity -->
+  <div class="section">
+    <h2><span class="sec-num">01</span> Developer &amp; Company Information</h2>
+    <p>Video Downloader ("the App") is developed and maintained by:</p>
+    <ul>
+      <li><strong>Developer:</strong> Kunal Gupta</li>
+      <li><strong>Company:</strong> BE Global</li>
+      <li><strong>Contact:</strong> <a href="mailto:kunal@thebeglobal.com">kunal@thebeglobal.com</a></li>
+    </ul>
+    <p>References to "we", "us", or "our" throughout these Terms refer to BE Global and its developer Kunal Gupta.</p>
+  </div>
+
+  <!-- 2. Acceptance of Terms -->
+  <div class="section">
+    <h2><span class="sec-num">02</span> Acceptance of Terms</h2>
+    <p>By installing, accessing, or using the App, you confirm that you:</p>
+    <ul>
+      <li>Are at least 13 years of age (or the applicable minimum age in your jurisdiction)</li>
+      <li>Have the legal capacity to enter into a binding agreement</li>
+      <li>Have read, understood, and agreed to these Terms &amp; Conditions in their entirety</li>
+      <li>Agree to comply with all applicable local, national, and international laws and regulations</li>
+    </ul>
+  </div>
+
+  <!-- 3. Description of Service -->
+  <div class="section">
+    <h2><span class="sec-num">03</span> Description of Service</h2>
+    <p>Video Downloader provides a technical utility that allows users to extract and save media files (video, audio, images) from internet URLs directly to their mobile device storage. The App processes all downloads locally on the user's device using open-source libraries (YoutubeDL-Android and FFmpeg). BE Global does not host, store, transmit, or proxy any media content through its own servers.</p>
+  </div>
+
+  <!-- 4. Permitted & Prohibited Use -->
+  <div class="section">
+    <h2><span class="sec-num">04</span> Permitted &amp; Prohibited Use</h2>
+    <p>The App is intended strictly for <strong>personal, non-commercial, lawful use only</strong>. Users are solely responsible for ensuring their use complies with all applicable laws and third-party platform terms.</p>
+    <div class="two-col">
+      <div class="col-card allowed">
+        <div class="col-title">✔ Permitted Use</div>
+        <ul>
+          <li>Downloading content you have personally created</li>
+          <li>Downloading content licensed under Creative Commons or equivalent open licenses</li>
+          <li>Downloading content the rights holder has explicitly made freely available</li>
+          <li>Downloading public domain content</li>
+          <li>Personal, offline viewing of content you have rights to</li>
+        </ul>
+      </div>
+      <div class="col-card prohibited">
+        <div class="col-title">✘ Prohibited Use</div>
+        <ul>
+          <li>Downloading copyrighted content without explicit rights or authorization</li>
+          <li>Redistributing, reselling, or publicly sharing downloaded content</li>
+          <li>Using downloaded content for commercial purposes</li>
+          <li>Circumventing DRM or platform access controls</li>
+          <li>Any use that violates a third-party platform's Terms of Service</li>
+          <li>Automated or bulk downloading (scraping)</li>
+        </ul>
+      </div>
+    </div>
+    <p>Violation of these terms may result in your access being terminated and may expose you to civil or criminal liability under applicable copyright law.</p>
+  </div>
+
+  <!-- 5. Intellectual Property & Copyright -->
+  <div class="section">
+    <h2><span class="sec-num">05</span> Intellectual Property &amp; Copyright</h2>
+    <p><strong>Third-Party Content:</strong> All videos, images, and audio accessible through the App are the exclusive property of their respective rights holders. BE Global makes no claim of ownership over any media content downloaded using the App.</p>
+    <p><strong>Strict No-Piracy Policy:</strong> We do not facilitate, encourage, endorse, or condone the unauthorized downloading, reproduction, distribution, or public communication of copyrighted works. This App must not be used to infringe upon the intellectual property rights of any individual or organization.</p>
+    <p><strong>User Responsibility:</strong> You bear full and sole legal responsibility for the content you choose to download. BE Global will not be held liable for any copyright infringement committed by users. If you receive a copyright claim or legal action arising from your use of this App, BE Global bears no responsibility or liability.</p>
+    <p><strong>App Intellectual Property:</strong> All original code, branding, UI design, logos, and features of the App are the intellectual property of BE Global and Kunal Gupta, protected under applicable intellectual property law. Unauthorized reproduction or distribution of the App or its components is strictly prohibited.</p>
+  </div>
+
+  <!-- 6. Non-Affiliation Disclaimer -->
+  <div class="section">
+    <h2><span class="sec-num">06</span> Non-Affiliation &amp; Trademark Disclaimer</h2>
+    <div class="platform-strip">
+      <strong>Official Disclaimer</strong>
+      Video Downloader is an independent utility developed by BE Global. It is not affiliated with, associated with, authorized by, endorsed by, or in any way officially connected with YouTube (Google LLC), Facebook (Meta Platforms Inc.), Instagram (Meta Platforms Inc.), WhatsApp (Meta Platforms Inc.), TikTok (ByteDance Ltd.), Twitter/X (X Corp.), or any other platform or their parent companies, subsidiaries, or affiliates.
+    </div>
+    <p>All product names, logos, brands, and trademarks mentioned are the registered property of their respective owners. Their use in this document is for identification purposes only and does not imply any affiliation or endorsement.</p>
+    <p>Users who access third-party platforms through the App's built-in browser are solely responsible for complying with each platform's own Terms of Service and Community Guidelines.</p>
+  </div>
+
+  <!-- 7. Advertising -->
+  <div class="section">
+    <h2><span class="sec-num">07</span> Advertising</h2>
+    <p>This App displays advertisements served by <strong>Google Ad Manager</strong>. By using the App, you acknowledge that advertisements will be displayed, including Banner, Interstitial, Native, Rewarded, and App Open ad formats.</p>
+    <p>Upon first launch, you will be asked for consent before personalized advertising is enabled. Ads may be served based on your device's Advertising ID and anonymous usage signals. You may opt out of personalized ads at any time via:</p>
+    <ul>
+      <li><strong>Android 11 and below:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
+      <li><strong>Android 12 and above:</strong> Settings → Privacy → Ads → Delete advertising ID</li>
+    </ul>
+    <p>BE Global is not responsible for the content of advertisements displayed by Google Ad Manager. Any concerns about specific ad content should be directed to Google.</p>
+  </div>
+
+  <!-- 8. Analytics -->
+  <div class="section">
+    <h2><span class="sec-num">08</span> Analytics &amp; Attribution</h2>
+    <p>We use <strong>Apptrove</strong>, a mobile measurement platform, to track anonymous in-app events such as app installs, download initiated, and download completed events. This data is used solely to understand how users interact with the App and to improve its performance and stability.</p>
+    <p>No personally identifiable information (PII) is collected through Apptrove. Data collected is limited to your device's Advertising ID (GAID) and anonymous usage events. For more information, visit: <a href="https://apptrove.com/privacy-policy" target="_blank">https://apptrove.com/privacy-policy</a></p>
+  </div>
+
+  <!-- 9. Limitations of Liability -->
+  <div class="section">
+    <h2><span class="sec-num">09</span> Limitations of Liability</h2>
+    <p>The App is provided on an <strong>"as is" and "as available"</strong> basis without warranties of any kind. BE Global expressly disclaims all warranties, whether express, implied, statutory, or otherwise.</p>
+    <table class="liab-table">
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>BE Global Liability</th>
+          <th>Who Bears Responsibility</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>User downloads copyrighted content</td>
+          <td><span class="badge no">None</span></td>
+          <td>Solely the user</td>
+        </tr>
+        <tr>
+          <td>Platform blocks or changes download API</td>
+          <td><span class="badge no">None</span></td>
+          <td>Third-party platform decision</td>
+        </tr>
+        <tr>
+          <td>Data loss or file corruption on device</td>
+          <td><span class="badge no">None</span></td>
+          <td>User's device / storage</td>
+        </tr>
+        <tr>
+          <td>Ad content displayed by Google</td>
+          <td><span class="badge no">None</span></td>
+          <td>Google Ad Manager</td>
+        </tr>
+        <tr>
+          <td>User violates third-party platform ToS</td>
+          <td><span class="badge no">None</span></td>
+          <td>Solely the user</td>
+        </tr>
+        <tr>
+          <td>App downtime or technical unavailability</td>
+          <td><span class="badge no">None</span></td>
+          <td>No guaranteed uptime</td>
+        </tr>
+        <tr>
+          <td>Indirect or consequential damages</td>
+          <td><span class="badge no">None</span></td>
+          <td>Excluded to maximum extent permitted by law</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>To the maximum extent permitted by applicable law, BE Global's total aggregate liability to you for any claims arising from use of the App shall not exceed the amount you paid for the App (which is zero, as the App is free).</p>
+  </div>
+
+  <!-- 10. Third-Party Services -->
+  <div class="section">
+    <h2><span class="sec-num">10</span> Third-Party Services</h2>
+    <p>The App integrates the following third-party services, each operating under its own independent terms and privacy policies. BE Global is not responsible for the practices of these third parties:</p>
+    <ul>
+      <li><strong>Google Play Services</strong> — Core app functionality and security. <a href="https://policies.google.com/terms" target="_blank">Google Terms</a></li>
+      <li><strong>Google Ad Manager</strong> — Advertisement serving. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+      <li><strong>Apptrove</strong> — Analytics and install attribution. <a href="https://apptrove.com/privacy-policy" target="_blank">Apptrove Privacy Policy</a></li>
+      <li><strong>YoutubeDL-Android</strong> — Open-source video URL extraction library (local processing only, no data sharing)</li>
+      <li><strong>FFmpeg</strong> — Open-source media processing library (local processing only, no data sharing)</li>
+      <li><strong>Glide</strong> — Image loading library (local processing only, no data sharing)</li>
+    </ul>
+  </div>
+
+  <!-- 11. Termination -->
+  <div class="section">
+    <h2><span class="sec-num">11</span> Termination</h2>
+    <p>BE Global reserves the right to discontinue the App or any features thereof at any time without notice. We also reserve the right to terminate or restrict your access to the App if you are found to be in breach of these Terms &amp; Conditions, without liability to you.</p>
+    <p>Upon termination, all rights granted to you under these Terms will immediately cease. Provisions of these Terms that by their nature should survive termination (including, without limitation, ownership provisions, warranty disclaimers, and limitations of liability) shall survive.</p>
+  </div>
+
+  <!-- 12. Governing Law -->
+  <div class="section">
+    <h2><span class="sec-num">12</span> Governing Law &amp; Dispute Resolution</h2>
+    <p>These Terms &amp; Conditions shall be governed by and construed in accordance with the laws of <strong>India</strong>, without regard to its conflict of law provisions. The Information Technology Act, 2000, the Consumer Protection Act, 2019, and India's Digital Personal Data Protection Act, 2023 apply where relevant.</p>
+    <p>Any disputes arising from or relating to these Terms or the App shall first be attempted to be resolved through good-faith negotiation by contacting us at <a href="mailto:kunal@thebeglobal.com">kunal@thebeglobal.com</a>. If unresolved, disputes shall be subject to the exclusive jurisdiction of courts in India.</p>
+  </div>
+
+  <!-- 13. Changes to Terms -->
+  <div class="section">
+    <h2><span class="sec-num">13</span> Changes to These Terms</h2>
+    <p>We reserve the right to update or modify these Terms &amp; Conditions at any time. When material changes are made, we will update the "Last Updated" date at the top of this document and, where practicable, provide notice within the App.</p>
+    <p>Your continued use of the App following any changes constitutes your acceptance of the revised Terms. We encourage you to review these Terms periodically. If you do not agree to any revised Terms, your sole remedy is to discontinue use of the App.</p>
+  </div>
+
+  <!-- 14. Severability -->
+  <div class="section">
+    <h2><span class="sec-num">14</span> Severability &amp; Entire Agreement</h2>
+    <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, that provision shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions shall continue in full force and effect.</p>
+    <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and BE Global with respect to your use of the App, and supersede all prior or contemporaneous agreements.</p>
+  </div>
+
+  <!-- 15. Contact -->
+  <div class="section">
+    <h2><span class="sec-num">15</span> Contact Information</h2>
+    <div class="contact-box">
+      <h3>Questions or Concerns?</h3>
+      <p>For any questions, concerns, or legal inquiries regarding these Terms &amp; Conditions, please contact:</p>
+      <div class="detail">
+        <div><span>Developer</span><strong>Kunal Gupta</strong></div>
+        <div><span>Company</span><strong>BE Global</strong></div>
+        <div><span>Legal &amp; General Enquiries</span><strong><a href="mailto:kunal@thebeglobal.com">kunal@thebeglobal.com</a></strong></div>
+        <div><span>Response Time</span><strong>Within 30 days of receiving your request</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="doc-footer">
+    <p>&copy; 2026 BE Global · Video Downloader · All rights reserved.</p>
+    <p style="margin-top:6px;">This document was last reviewed for Google Play Store compliance in June 2026.</p>
+  </footer>
+
 </div>
-
 </body>
 </html>
